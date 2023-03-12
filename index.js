@@ -10,7 +10,7 @@ const DB_URI = process.env.DB_URI;
 
 const app = express();
 
-app.use(cors({ origin: 'https://calc.hydraledger.io' }));
+app.use(cors({ origin: 'http://localhost:4200' }));
 app.use(express.json());
 
 app.use('/auth', authRouter);
