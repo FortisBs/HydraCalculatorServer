@@ -78,6 +78,7 @@ Pass the following object in body:
 ```
 {
     token: string;
+    user: User;
 }
 ```
 
@@ -107,19 +108,17 @@ Example: `/users/someUserId`
 **Request** <br/>
 Pass one of the following query parameter:
 * name <br/>
-  Example: `/delegates/getBy?name=someDelegate`
+  Example: `/delegates/getBy?name=someDelegate` <br/>
+  Response: `Delegate`
 * userId <br/>
-  Example: `/delegates/getBy?userId=someId`
-
-**Response** <br/>
-`Delegate`
+  Example: `/delegates/getBy?userId=someId` <br/>
+  Response: `Delegate[]`
 
 ---
 
 #### GET /delegates
 **Request** <br/>
-Without attachments <br/>
-Available only to users with the admin role
+Without attachments
 
 **Response** <br/>
 `Delegate[]`
@@ -138,7 +137,7 @@ Pass the following object in body:
 ```
 
 **Response** <br/>
-None
+`Delegate`
 
 ---
 

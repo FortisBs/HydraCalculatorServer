@@ -9,7 +9,6 @@ const Delegate = new Schema({
 
   shareRate: {
     type: Number,
-    pattern: /^(0(\.\d{1,2})?|1(\.0{1,2})?)$|^([01](\.\d{1,2})?)$/,
     required: true
   },
 

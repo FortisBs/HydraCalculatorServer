@@ -7,10 +7,11 @@ const cors = require('cors');
 
 const PORT = process.env.PORT;
 const DB_URI = process.env.DB_URI;
+const ORIGIN_URL = process.env.CORS_ORIGIN_URL;
 
 const app = express();
 
-app.use(cors({ origin: 'https://calc.hydraledger.io' }));
+app.use(cors({ origin: ORIGIN_URL }));
 app.use(express.json());
 
 app.use('/auth', authRouter);

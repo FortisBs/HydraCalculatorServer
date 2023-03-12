@@ -13,7 +13,7 @@ class DelegatesController {
       const newDelegate = new Delegate({ name, shareRate, userId });
       await newDelegate.save();
 
-      return res.json({ message: 'Successfully added' });
+      return res.json(newDelegate);
 
     } catch (e) {
       console.log(e);
