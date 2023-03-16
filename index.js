@@ -11,7 +11,7 @@ const ORIGIN_URL = process.env.CORS_ORIGIN_URL;
 
 const app = express();
 
-app.use(cors({ origin: `${ORIGIN_URL}` }));
+app.use(cors({ origin: ORIGIN_URL }));
 app.use(express.json());
 
 app.use('/auth', authRouter);
@@ -19,7 +19,7 @@ app.use('/delegates', delegatesRouter);
 
 const start = async () => {
   try {
-    await mongoose.connect(`${DB_URI}`);
+    await mongoose.connect(DB_URI);
     app.listen(PORT, () => console.log('Server started'));
 
   } catch (e) {
