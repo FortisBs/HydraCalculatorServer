@@ -28,3 +28,4 @@ const start = async () => {
 }
 
 start().catch(() => console.error('Server error'));
+module.exports = app
