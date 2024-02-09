@@ -1,5 +1,5 @@
 # Hydra Calculator Server
-Server for https://calc.hydraledger.io
+Server for https://calc.hydraledger.tech
 
 ## API Documentation
 
